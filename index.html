@@ -1,7 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head><title>Sarah Sullivan</title></head>
-  <body>
-    <h1>Sarah Sullivan/h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarah Sullivan</title>
+  <meta name="description" content="[A short description of my research]">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="site-wrapper">
+    <script src="sidebar.js"></script>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1>About Sarah</h1>
+      </div>
+
+      <!-- INTRO PULL QUOTE — replace with 1–2 sentences capturing your research identity -->
+      <blockquote class="about-intro">
+        Social science researcher-in-training, passionate about families, fertility, the life course, and the future of the American economy. 
+      </blockquote>
+
+      <div class="about-body">
+        <p>
+          Hi, I'm Sarah! I'm a <strong>PhD Student</strong> in Sociology at
+          the University of Michigan and predoctoral trainee at the world-renowned Population Studies Center at UofM's Institute for Social Research. 
+        </p>
+        <p>
+          Since beginning my PhD, my work has focused on understanding contemporary processes of family formation and dissolution in the United States, 
+          with a focus on how economic uncertainty shapes individuals' decisions about whether and when to have children.
+          
+          I have presented my findings at the Population Association of America and the American Sociological Association annual meetings in 2025 and 2026.
+        </p>
+        <p>
+          I earned my undergraduate degree in 2023 from Johns Hopkins University, where I studied economics and international studies. 
+          Afterward, I worked as a predoctoral research fellow for the Poverty and Inequality Research Lab (PIRL). During my two years at PIRL,
+          I traveled the United States, sitting down with dozens of Americans to hear their life stories and understand the mechanisms driving or inhibiting 
+          economic mobility in our country.
+        </p>
+
+        <p>
+          Beyond family demography, my research interests include <strong>survey methodology</strong>,
+          <strong>non-parametric modeling</strong>, and <strong>Marxist feminist theory</strong>. Read about my
+          <a href="projects.html">projects</a> for more information.
+          For questions or collaborations, feel free to <a href="contact.html">get in touch</a>.
+
+          Check back soon for more!
+        </p>
+
+
+      </div>
+
+      <!-- RECENT HIGHLIGHTS (optional — remove this section if you don't want it) -->
+      <h2 class="section-title">Recent highlights</h2>
+      <div style="display:flex; flex-direction:column; gap:0;">
+        <div class="pub-item">
+          <p class="pub-title">Pronatalism as Reproductive Accumulation</p>
+          <p class="pub-meta">Sarah Sullivan. (<em>2026</em>). <em>To be presented at the American Sociological Association annual meeting, August 2026</em>. 
+        </div>
+        <div class="pub-item">
+          <p class="pub-title">Subbaccelaureate Swirling: Understanding Community College Student Post-Secondary Trajectories</p>
+          <p class="pub-meta">Stefanie DeLuca, Nick Papageorge, Jacqueline Groccia, Sarah Sullivan. (<em>2025</em>). <em> Presented at the Population Association of America annual meeting, April 2025</em>.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; <span id="yr"></span> Sarah Sullivan, 2026 &nbsp;·&nbsp; Built with GitHub Pages
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
 </html>
