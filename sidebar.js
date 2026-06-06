@@ -16,7 +16,7 @@
       <span></span><span></span><span></span>
     </button>
     <aside class="sidebar" id="sidebar">
-      <img src="/images/sarah.png" alt="Sarah Sullivan" class="sidebar-avatar">
+      <img src="/images/me2.JPG" alt="Sarah Sullivan" class="sidebar-avatar">
       <p class="sidebar-name">Sarah Sullivan</p>
       <p class="sidebar-title">PhD Student</p>
       <p class="sidebar-dept">Department of Sociology<br>University of Michigan - Ann Arbor</p>

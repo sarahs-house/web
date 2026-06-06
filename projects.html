@@ -3,65 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Projects | Sarah Sullivan</title>
+  <meta name="description" content="Current and ongoing projects by Sarah Sullivan.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  <div class="site-wrapper">
-    <script src="sidebar.js"></script>
-
-    <main class="main-content">
-      <div class="page-header">
-        <h1>Projects</h1>
-
+<body class="three-panel-home subpage-page">
+  <main class="three-panel-layout" aria-label="Projects page layout">
+    <section class="three-panel-col three-panel-left" aria-label="Page identity">
+      <div class="subpage-left-copy">
+        <h1>Selected<br>Projects</h1>
+        <p>Research Portfolio</p>
       </div>
+    </section>
 
-      <!-- ── CURRENT PROJECTS ── -->
-      <h2 class="section-title">Current projects</h2>
-      <div class="project-grid">
+    <section class="three-panel-col three-panel-middle subpage-middle" aria-label="Projects content">
+      <article class="subpage-content">
+        <h2 class="subpage-title">Current Projects</h2>
 
-        <div class="project-card">
-          <span class="tag">Ongoing</span>
-          <h3 style="margin-top:0.6rem;">Cohort Family Instability, 1968-2023</h3>
-          <p>Principal Investigator: Pamela Smock</p>
-          <p>Demographic analysis of family instability trends over time, using data from the most recent
-            waves of the Panel Study of Income Dynamics (PSID).</p>
+        <div class="subpage-card-grid">
+          <section class="subpage-card">
+            <h3>Cohort Family Instability, 1968-2023</h3>
+            <p>PI: Pamela Smock. Demographic analysis of family instability trends using recent PSID waves.</p>
+          </section>
+
+          <section class="subpage-card">
+            <h3>Gen Z Relationship Formation</h3>
+            <p>PIs: Elizabeth Armstrong and Hannah Tessler. Qualitative work on relationship formation and fertility intentions among ages 18-24.</p>
+          </section>
+
+          <section class="subpage-card">
+            <h3>The Community Study</h3>
+            <p>PIs: Stefanie DeLuca and Kaylee T. Matheny. Mixed-methods investigation of race/class gaps in economic mobility, with multi-site interviews.</p>
+          </section>
+
+          <section class="subpage-card">
+            <h3>College and Career Decision Making Study</h3>
+            <p>PIs: Stefanie DeLuca and Nick Papageorge. Community college trajectories and subbaccalaureate pathway dynamics.</p>
+          </section>
         </div>
+      </article>
+    </section>
 
-        <div class="project-card">
-          <span class="tag">Ongoing</span>
-          <h3 style="margin-top:0.6rem;">Gen Z Relationship Formation</h3>
-          <p>Principal Investigators: Elizabeth Armstrong and Hannah Tessler</p>
-          <p>Qualitative investigation into relationship formation and fertility intentions among young adults (ages 18-24) </p>
+    <section class="three-panel-col three-panel-right" aria-label="Right panel">
+      <div class="three-panel-right-stack">
+        <div class="three-panel-photo-box" aria-label="Profile photo">
+          <img src="images/me2.jpeg" alt="Sarah Sullivan" class="three-panel-photo">
         </div>
-
-        <div class="project-card">
-          <span class="tag">Ongoing</span>
-          <h3 style="margin-top:0.6rem;">The Community Study</h3>
-          <p>Principal Investigators: Stefanie DeLuca and Kaylee T. Matheny</p>
-          <p>Mixed-methods investigation into recent Opportunity Insights findings on race and class gaps in American economic mobility.</p>
-          <p> Multi-site qualitative data collection initiative, with over 200 interviews to date.</p>
-          <a href="https://www.thecommunitystudy.org" style="display:inline-block; margin-top:0.75rem; font-size:0.78rem;">Learn more →</a>
-        </div>
-
-        <div class="project-card">
-          <span class="tag">Ongoing</span>
-          <h3 style="margin-top:0.6rem;">The College and Career Decision Making Study</h3>
-          <p>Principal Investigators: Stefanie DeLuca and Nick Papageorge</p>
-          <p> Mixed-methods project on the postsecondary trajectories of community college students, contributing to a literature on subbaccelaureate
-            degree pathways and "swirling."</p>
-        </div>
-
-
+        <p class="three-panel-photo-caption">photo of me</p>
+        <nav aria-label="Main navigation">
+          <ul class="three-panel-sidebar-nav">
+            <li><a href="research-faqs.html" class="research-faqs-btn">RESEARCH FAQS</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="thankyou.html">Thank You</a></li>
+          </ul>
+        </nav>
       </div>
-
-    </main>
-  </div>
-
-  <footer class="site-footer">
-    &copy; <span id="yr"></span> Sarah Sullivan, 2026. &nbsp;·&nbsp; Built with GitHub Pages
-  </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+    </section>
+  </main>
 </body>
 </html>

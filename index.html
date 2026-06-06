@@ -4,70 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarah Sullivan</title>
-  <meta name="description" content="[A short description of my research]">
+  <meta name="description" content="Sarah Sullivan - Sociology PhD student at the University of Michigan.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  <div class="site-wrapper">
-    <script src="sidebar.js"></script>
-
-    <main class="main-content">
-      <div class="page-header">
-        <h1>About Sarah</h1>
-      </div>
-
-      <blockquote class="about-intro">
-        Social science researcher-in-training, passionate about families, fertility, the life course, and the future of the American economy. 
-      </blockquote>
-
-      <div class="about-body">
-        <p>
-          Hi, I'm Sarah! I'm a <strong>PhD Student</strong> in Sociology at
-          the University of Michigan and predoctoral trainee at the world-renowned Population Studies Center at UofM's Institute for Social Research. 
-        </p>
-        <p>
-          Since beginning my PhD, my work has focused on understanding contemporary processes of family formation and dissolution in the United States, 
-          with a focus on how economic uncertainty shapes individuals' decisions about whether and when to have children.
-          
-          I have presented my findings at the Population Association of America and the American Sociological Association annual meetings in 2025 and 2026.
-        </p>
-        <p>
-          I earned my undergraduate degree in 2023 from Johns Hopkins University, where I studied economics and international studies. 
-          Afterward, I worked as a predoctoral research fellow for the Poverty and Inequality Research Lab (PIRL). During my two years at PIRL,
-          I traveled the United States, sitting down with dozens of Americans to hear their life stories and understand the mechanisms driving or inhibiting 
-          economic mobility in our country.
-        </p>
-
-        <p>
-          Beyond family demography, my research interests include <strong>survey methodology</strong>,
-          <strong>non-parametric modeling</strong>, and <strong>Marxist feminist theory</strong>. Read about my
-          <a href="projects.html">projects</a> for more information.
-          Check back soon for more!
-        </p>
-
-
-      </div>
-
-      <!-- RECENT HIGHLIGHTS -->
-      <h2 class="section-title">Recent highlights</h2>
-      <div style="display:flex; flex-direction:column; gap:0;">
-        <div class="pub-item">
-          <p class="pub-title">Pronatalism as Reproductive Accumulation</p>
-          <p class="pub-meta">Sarah Sullivan. (<em>2026</em>). <em>To be presented at the American Sociological Association annual meeting, August 2026</em>. 
+<body class="three-panel-home">
+  <main class="three-panel-layout" aria-label="Three panel homepage">
+    <section class="three-panel-col three-panel-left" aria-label="Sarah Sullivan intro">
+      <div class="three-panel-left-stack">
+        <div class="us-map-wrap" aria-label="United States interactive map">
+          <svg id="us-map" viewBox="0 0 975 610" role="img" aria-label="Map of the United States"></svg>
+          <div id="us-map-tooltip" class="us-map-tooltip" role="status" aria-live="polite"></div>
         </div>
-        <div class="pub-item">
-          <p class="pub-title">Subbaccelaureate Swirling: Understanding Community College Student Post-Secondary Trajectories</p>
-          <p class="pub-meta">Stefanie DeLuca, Nick Papageorge, Jacqueline Groccia, Sarah Sullivan. (<em>2025</em>). <em> Presented at the Population Association of America annual meeting, April 2025</em>.</p>
+
+        <div class="three-panel-copy">
+          <h1>SARAH<br>SULLIVAN</h1>
+          <p class="three-panel-role">SOCIAL SCIENTIST IN TRAINING</p>
+          <p class="three-panel-program">PhD Student @ University of Michigan Sociology</p>
         </div>
       </div>
+    </section>
 
-    </main>
-  </div>
+    <section class="three-panel-col three-panel-middle" aria-label="Middle panel"></section>
 
-  <footer class="site-footer">
-    &copy; <span id="yr"></span> Sarah Sullivan, 2026 &nbsp;·&nbsp; Built with GitHub Pages
-  </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+    <section class="three-panel-col three-panel-right" aria-label="Right panel">
+      <div class="three-panel-right-stack">
+        <div class="three-panel-photo-box" aria-label="Profile photo">
+          <img src="images/me2.jpeg" alt="Sarah Sullivan" class="three-panel-photo">
+        </div>
+        <p class="three-panel-photo-caption">photo of me</p>
+        <nav aria-label="Main navigation">
+          <ul class="three-panel-sidebar-nav">
+            <li><a href="research-faqs.html" class="research-faqs-btn">RESEARCH FAQS</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="thankyou.html">Thank You</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+  <script src="map.js"></script>
 </body>
 </html>
