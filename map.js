@@ -63,13 +63,13 @@
 
   const stateNotes = {
     Michigan: 'PhD Student @ the University of Michigan & newly-minted Ann Arborite. Recs: York & Dozer Coffee.',
-    NewYork: 'Native New Yorker, Knicks/Mets/Islanders/Giants, paisan, bagel w/ lox & scallion cc.',
+    NewYork: 'Native New Yorker, paisan, Knicks/ Mets/ Islanders/ Giants, bagel w/ lox & scallion cc.',
     Texas: 'Former employee of the Bureau of Labor Statistics Dallas office & frequent H-Town visitor!',
     Illinois: 'Researcher for the Community Study in Madison County, IL. Maybe I knocked on your door?', 
     Arkansas: 'Researcher for the Community Study in Crittenden County, AR. Maybe I knocked on your door?',
     Mississippi: 'Maybe I knocked on your door over here? (The Community Study)',
     Tennessee: 'I might have visited you here too! (The Community Study)',
-    Missouri: 'PAA 2026 attendee and fried ravioli enjoyer.', 
+    Missouri: 'PAA 2026 attendee and fried ravioli enjoyer. Knocked some doors over here too!', 
     Colorado: 'Frequent visitor of beautiful Golden, CO.',
     Maryland: 'Spent my early 20s in Baltimore, the Greatest City in America. Hopkins grad.',
     Oklahoma: 'Did we meet in Checotah?',
