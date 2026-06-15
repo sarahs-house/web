@@ -30,7 +30,7 @@
   @keyframes fall{
     0% {transform: translateY(0) rotate(0deg); opacity: 0.85;}
     90% {opacity: 0.85; }
-    100% {transform: translateY(110vh) rotate(360deg); opacity 0.85; }
+    100% {transform: translateY(110vh) rotate(360deg); opacity 0; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -98,7 +98,7 @@
       return Math.random() * (max-min) + min; 
     }
 
-    function createDrop() {
+    function createDrop(index) {
       const img = document.createElement("img");
       img.className = "drop"; 
       img.src = IMAGES[Math.floor(Math.random() * IMAGES.length)];
