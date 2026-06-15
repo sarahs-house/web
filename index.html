@@ -87,9 +87,9 @@
   <script src="map.js"></script>
   <script> 
     const IMAGES= ["images/knicks.png", "images/trophy.png"]
-    const TOTAL_DROPS = 10;
-    const MIN_DURATION = 15; 
-    const MAX_DURATION = 30; 
+    const TOTAL_DROPS = 15;
+    const MIN_DURATION = 30; 
+    const MAX_DURATION = 60; 
     const MIN_SIZE = 350; 
     const MAX_SIZE = 500; 
 
@@ -107,7 +107,7 @@
       const size = rand(MIN_SIZE, MAX_SIZE); 
       const duration = rand(MIN_DURATION, MAX_DURATION); 
       const delay = rand(0, MAX_DURATION);
-      const left = rand(0, 97);
+      const left = rand(0, 65);
 
       img.style.width = size + "px"; 
       img.style.height = size + "px";
@@ -121,6 +121,11 @@
     for(let i = 0; i < TOTAL_DROPS; i++){
       createDrop();
     }
+
+    setTimeout(() => {
+      document.getElementbyId("rain-container").innerHTML = "";
+    }, 30000);
+      
     
   </script>
 </body>
