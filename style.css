@@ -848,7 +848,7 @@ body.three-panel-home {
 .three-panel-copy {
   max-width: 250px;
   text-align: center;
-  margin-top: calc(clamp(-1.35rem, -1.95vh, -0.8rem) - 3.5rem);
+  margin-top: calc(clamp(-1.35rem, -1.95vh, -0.8rem) - 4.5rem);
 }
 
 .three-panel-left .three-panel-copy {
