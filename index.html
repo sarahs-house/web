@@ -6,8 +6,42 @@
   <title>Sarah Sullivan</title>
   <meta name="description" content="Sarah Sullivan - Sociology PhD student at the University of Michigan.">
   <link rel="stylesheet" href="style.css">
+
+
+
+<style>
+  #rain-container{
+    position: fixed; 
+    top: 0; left: 0;
+    width: 100%; height: 100%; 
+    pointer-events: none; 
+    z-index: 9999; 
+    overflow: hidden;
+  }
+
+  .drop {
+    position: absolute;
+    top: -120px; 
+    object-fit: contain; 
+    animation: fall linear infinite; 
+    opacity: 0.75;
+  }
+
+  @keyframes fall{
+    0% {transform: translateY(0) rotate(0deg); opacity: 0.75;}
+    90% {opacity: 0.75; }
+    100% {transform: translateY(110vh) rotate(360deg); opacity 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce)
+    .drop {animation: none; opacity: 0; }
+  }
+
+</style>
 </head>
 <body class="three-panel-home">
+
+  <div id="rain-container" aria-hidden="true"> </div>
   <main class="three-panel-layout" aria-label="Three panel homepage">
     <section class="three-panel-col three-panel-left" aria-label="Sarah Sullivan intro">
       <div class="three-panel-left-stack">
@@ -51,5 +85,43 @@
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
   <script src="map.js"></script>
+  <script> 
+    const IMAGES= ["images/knicks.png", "images/trophy.png"]
+    const TOTAL_DROPS = 30;
+    const MIN_DURATION = 2.5; 
+    const MAX_DURATION = 6.0; 
+    const MIN_SIZE = 40; 
+    const MAX_SIZE = 75; 
+
+    const container = document.getElementByID("rain-container");
+    function rand(min, max){
+      return Math.random() * (max-min) + min; 
+    }
+
+    function createDrop() {
+      const img = document.createElement("img");
+      img.className = "drop"; 
+      img.src = IMAGES[Math.floor(Math.random() * IMAGES.length)];
+      img.alt = "";
+
+      const size = rand(MIN_SIZE, MAX_SIZE); 
+      const duration = rand(MIN_DURATION, MAX_DURATION); 
+      const delay = rand(0, MAX_DURATION);
+      const left = rand(0, 97);
+
+      img.style.width = size + "px"; 
+      img.style.height = size + "px";
+      img.style.left = left + "%"; 
+      img.style.animationDuration = duration + "s";
+      img.style.animationDelay = "-" + delay + "s"; 
+
+      container.appendChild(img); 
+    }
+
+    for(let i = 0; o < TOTAL_DROPS; i++){
+      createDrop();
+    }
+    
+  </script>
 </body>
 </html>
