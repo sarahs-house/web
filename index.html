@@ -23,7 +23,7 @@
     position: absolute;
     top: -120px; 
     object-fit: contain; 
-    animation: fall linear infinite; 
+    animation: fall linear 1 forwards; 
     opacity: 0.75;
   }
 
@@ -87,11 +87,11 @@
   <script src="map.js"></script>
   <script> 
     const IMAGES= ["images/knicks.png", "images/trophy.png"]
-    const TOTAL_DROPS = 15;
+    const TOTAL_DROPS = 25;
     const MIN_DURATION = 7; 
     const MAX_DURATION = 14; 
-    const MIN_SIZE = 100; 
-    const MAX_SIZE = 200; 
+    const MIN_SIZE = 50; 
+    const MAX_SIZE = 100; 
 
     const container = document.getElementById("rain-container");
     function rand(min, max){
@@ -120,12 +120,7 @@
 
     for(let i = 0; i < TOTAL_DROPS; i++){
       createDrop();
-    }
-
-    setTimeout(() => {
-      document.getElementbyId("rain-container").innerHTML = "";
-    }, 30000);
-      
+    } 
     
   </script>
 </body>
