@@ -33,7 +33,7 @@
     100% {transform: translateY(110vh) rotate(360deg); opacity 0; }
   }
 
-  @media (prefers-reduced-motion: reduce)
+  @media (prefers-reduced-motion: reduce) {
     .drop {animation: none; opacity: 0; }
   }
 
@@ -93,7 +93,7 @@
     const MIN_SIZE = 40; 
     const MAX_SIZE = 75; 
 
-    const container = document.getElementByID("rain-container");
+    const container = document.getElementById("rain-container");
     function rand(min, max){
       return Math.random() * (max-min) + min; 
     }
@@ -118,7 +118,7 @@
       container.appendChild(img); 
     }
 
-    for(let i = 0; o < TOTAL_DROPS; i++){
+    for(let i = 0; i < TOTAL_DROPS; i++){
       createDrop();
     }
     
