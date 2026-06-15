@@ -33,6 +33,12 @@
     100% {transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
 
+  @keyframes fallAndStay {
+    0% {transform: translateY(0) rotate(0deg); opacity: 0.85;}
+    100% {transform: translateY(calc(100vh - 120px)) rotate(360deg); opacity: 1;}
+  }
+  
+
   @media (prefers-reduced-motion: reduce) {
     .drop {animation: none; opacity: 0; }
   }
@@ -101,7 +107,9 @@
     function createDrop(index) {
       const img = document.createElement("img");
       img.className = "drop"; 
-      img.src = IMAGES[Math.floor(Math.random() * IMAGES.length)];
+
+      const isSpecial = index === 0; 
+      img.src = isSpecial ? "images/trophy.png" : IMAGES[Math.floor(Math.random() * IMAGES.length)];
       img.alt = "";
 
       const size = rand(MIN_SIZE, MAX_SIZE); 
@@ -115,6 +123,13 @@
       img.style.animationDuration = duration + "s";
       img.style.animationDelay = "-" + delay + "s"; 
 
+      if (isSpecial){
+        img.style.left = "auto";
+        img.style.right = "20px"; 
+        img.style.top = "0";
+        img.style.animation = `fallAndStay ${rand(MIN_DURATION, MAX_DURATION)}s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards`;
+        img.style.position = "fixed";
+      }
       container.appendChild(img); 
     }
 
