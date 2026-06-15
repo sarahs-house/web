@@ -848,7 +848,7 @@ body.three-panel-home {
 .three-panel-copy {
   max-width: 250px;
   text-align: center;
-  margin-top: calc(clamp(-1.35rem, -1.95vh, -0.8rem) - 2rem);
+  margin-top: calc(clamp(-1.35rem, -1.95vh, -0.8rem) - 3.5rem);
 }
 
 .three-panel-left .three-panel-copy {
@@ -884,6 +884,7 @@ body.three-panel-home {
   letter-spacing: 0.08em;
   color: #cfcfcf;
   text-align: left;
+  white-space: nowrap;
 }
 
 .three-panel-right-stack {
