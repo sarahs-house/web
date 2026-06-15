@@ -106,15 +106,19 @@
 
     function createDrop(index) {
       const img = document.createElement("img");
-      img.className = "drop"; 
-
-      const isSpecial = index === 0; 
-      img.src = isSpecial ? "images/trophy.png" : IMAGES[Math.floor(Math.random() * IMAGES.length)];
+      img.className = "drop";
       img.alt = "";
 
-      const isSpecial2 = index === 0; 
-      img.src = isSpecial2 ? "images/knicks.png" : IMAGES[Math.floor(Math.random() * IMAGES.length)];
-      img.alt = "";
+      const isSpecial = index === 0;
+      const isSpecial2 = index === 1;
+
+      if (isSpecial) {
+        img.src = "images/trophy.png"; 
+      } else if (isSpecial2) {
+        img.src = "images/knicks.png";
+      } else {
+        img.src = IMAGES[Math.floor(Math.random() * images.length)];
+      }
 
       const size = rand(MIN_SIZE, MAX_SIZE); 
       const duration = rand(MIN_DURATION, MAX_DURATION); 
@@ -141,7 +145,7 @@
         img.style.width = "140px";
         img.style.height = "140px";
         img.style.left = "auto";
-        img.style.right = "360px"; 
+        img.style.right = "400px"; 
         img.style.top = "0";
         img.style.animation = `fallAndStay ${rand(MIN_DURATION, MAX_DURATION)}s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards`;
         img.style.position = "fixed";
