@@ -23,7 +23,6 @@
     position: absolute;
     top: -120px; 
     object-fit: contain; 
-    animation: fall linear 1; 
     opacity: 0.85;
   }
 
@@ -88,7 +87,10 @@
   <script> 
     
     const container = document.getElementById("rain-container");
-
+    const MIN_DURATION = 1.5; 
+    const MAX_DURATION = 2.5; 
+    function rand(min, max) {return Math.random() * (max-min) + min; }
+    
     function createDrop(index) {
       const img = document.createElement("img");
       img.className = "drop";
@@ -104,6 +106,8 @@
       } else {
         img.src = IMAGES[Math.floor(Math.random() * IMAGES.length)];
       }
+      
+      container.appendChild(img); 
 
       if (isSpecial){
         img.style.width = "140px";
@@ -125,9 +129,9 @@
         img.style.position = "fixed";
       }
       
-      container.appendChild(img); 
     }
-    
+    createDrop(0);
+    createDrop(1);
   </script>
 </body>
 </html>
