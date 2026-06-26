@@ -27,12 +27,6 @@
     opacity: 0.85;
   }
 
-  @keyframes fall{
-    0% {transform: translateY(0) rotate(0deg); opacity: 0.85;}
-    90% {opacity: 0.85; }
-    100% {transform: translateY(110vh) rotate(360deg); opacity: 0; }
-  }
-
   @keyframes fallAndStay {
     0% {transform: translateY(0) rotate(0deg); opacity: 0.85;}
     100% {transform: translateY(calc(100vh - 120px)) rotate(360deg); opacity: 1;}
@@ -92,17 +86,8 @@
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
   <script src="map.js"></script>
   <script> 
-    const IMAGES= ["images/knicks.png", "images/trophy.png"]
-    const TOTAL_DROPS = 45;
-    const MIN_DURATION = 7; 
-    const MAX_DURATION = 14; 
-    const MIN_SIZE = 50; 
-    const MAX_SIZE = 97; 
-
+    
     const container = document.getElementById("rain-container");
-    function rand(min, max){
-      return Math.random() * (max-min) + min; 
-    }
 
     function createDrop(index) {
       const img = document.createElement("img");
@@ -119,17 +104,6 @@
       } else {
         img.src = IMAGES[Math.floor(Math.random() * IMAGES.length)];
       }
-
-      const size = rand(MIN_SIZE, MAX_SIZE); 
-      const duration = rand(MIN_DURATION, MAX_DURATION); 
-      const delay = rand(0, MAX_DURATION);
-      const left = (index / TOTAL_DROPS) * 65;
-
-      img.style.width = size + "px"; 
-      img.style.height = size + "px";
-      img.style.left = left + "%"; 
-      img.style.animationDuration = duration + "s";
-      img.style.animationDelay = delay + "s"; 
 
       if (isSpecial){
         img.style.width = "140px";
@@ -153,10 +127,6 @@
       
       container.appendChild(img); 
     }
-
-    for(let i = 0; i < TOTAL_DROPS; i++){
-      createDrop(i);
-    } 
     
   </script>
 </body>
