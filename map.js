@@ -61,6 +61,8 @@
     56: 'Wyoming'
   };
 
+  const stateNotes = {};
+  
   function stateKey(stateName) {
     return stateName.replace(/\s+/g, '');
   }
