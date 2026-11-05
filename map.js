@@ -59,13 +59,11 @@
     56: 'Wyoming'
   };
 
-  // States highlighted in pink
   const highlightedStates = new Set([
     'Arkansas',
     'Colorado',
     'Illinois',
     'Maryland',
-    'Massachusetts',
     'Michigan',
     'Mississippi',
     'Missouri',
